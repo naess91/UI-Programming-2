@@ -3,17 +3,17 @@ Course Project
 
 Requirements
 
-• an animated, interactive part
-  - Game?
-• a resizable screen
-  - Mobile compatible
-• interaction with graphics
-  - Integrated with admin tutorial
-• an interactive help/tutorial system
-  - Tutorial for admins
-• at least one media file (sound, video, etc.)
-  - Videos
-• multi/bilingual interface
-  - Translate
-• undo/redo (when feasible)
-  - Up/down vote
+###An animated, interactive part
+  Game
+###Resizable screen
+  Mobile compatible
+###Interaction with graphics
+  Integrated with admin tutorial
+###An interactive help/tutorial system
+  Tutorial for admins
+###At least one media file (sound, video, etc.)
+  Videos
+###Multi/bilingual interface
+  Translate
+###Undo/redo (when feasible)
+  Up/down vote
