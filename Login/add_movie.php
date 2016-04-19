@@ -20,9 +20,14 @@
     <!-- Custom CSS -->
     <link href="../css/admin.css" rel="stylesheet">
     <link href="../css/base.css" rel="stylesheet" />
-    <link href="../css/style.css" rel="stylesheet" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
@@ -31,36 +36,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                        <? echo $_SESSION['USERNAME']; ?>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <br />
-                <br />
-                <li>
-                   <a href="../index.php">Logout</a>
-                </li>
-            </ul>
-        </div>
+       <?php include "sidebar.php"; ?>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
@@ -78,12 +54,15 @@
     <label for="formGroupExampleInput">Category</label>
     <input name="category" type="text" id="category" class="form-control">
   </fieldset>
-    <select data-role="none" name="select2[]" class="mySelect" data-theme="e">
+  <fieldset class="form-group">
+   <label for="formGroupExampleInput">Video type & link</label>
+    <select data-role="none" name="select2[]" class="form-control" id="mySelect" data-theme="e">
         <option value="link" selected="selected" >Choose link</option>
         <option value="local_video" >Local video</option>
          <option value="youtube_link" >Youtube link</option>
     </select>
         <input type="text" name="" id=""  data-theme="d" data-inline="true" class="form-control">
+        </fieldset>
    	<input type="submit" name="Submit" value="Submit"></td>
 </form>
 
@@ -91,7 +70,7 @@
                     </div>
                 </div>
             </div>
-       
+        </div>
         <!-- /#page-content-wrapper -->
 
     </div>
@@ -111,10 +90,9 @@
     });
 	
 	$(function(){
-    $('.mySelect').on('change', function() {
+    $('#mySelect').on('change', function() {
         var value = $(this).val();
         //alert to show I'm getting the value
-        alert (value);
         console.log($(this).nextAll('input[type="text"]').attr('name',value).attr('id',value));
     });
 });

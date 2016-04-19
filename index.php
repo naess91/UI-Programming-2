@@ -71,12 +71,12 @@ $query = mysql_query(
 
         <div class="row">
 <?php while($row = mysql_fetch_array($query)): ?>
- <div class="col-lg-3  col-xs-6 thumb">
-   <div class="embed-responsive embed-responsive-4by3">
+ <div class="col-lg-4  col-xs-6 thumb">
+   <div class="embed-responsive embed-responsive-16by9">
 <?php if ($row['local_video'] > NULL) { ?>    
 <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
 <? } else {  ?>
-<iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>"></iframe>
+<iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>" allowfullscreen></iframe>
 <? }?>
 </div> 
 
