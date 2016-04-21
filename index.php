@@ -2,6 +2,13 @@
 
 require_once('config.php');
 
+$query = 'SELECT * FROM  voting ';
+
+$stmt = $dbh->prepare($query);
+
+$stmt->execute();
+
+
 
 
 $query = mysql_query(
@@ -48,7 +55,7 @@ $query = mysql_query(
  <!-- Page Content -->
 
         <div class="row">
-<?php while($row = mysql_fetch_array($query)): ?>
+<?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
  <div class="col-lg-4  col-xs-6 thumb">
    <div class="embed-responsive embed-responsive-16by9">
 <?php if ($row['local_video'] > NULL) : ?>    
