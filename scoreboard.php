@@ -6,7 +6,7 @@ include('config.php');
 dbConnect();
 
 $query = mysql_query(
-	'SELECT * FROM  voting ');
+	'SELECT * FROM voting ORDER BY vote DESC LIMIT 10 ');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,13 +45,13 @@ $query = mysql_query(
 <div class="container">
 
   <div class="starter-template">
-    <h1>This site is under construction</h1>
+    <h1>Scoreboard</h1>
  <!-- Page Content -->
 
         <div class="row">
 <?php while($row = mysql_fetch_array($query)): ?>
- <div class="col-lg-4  col-xs-6 thumb">
-   <div class="embed-responsive embed-responsive-16by9">
+ <div class="col-lg-6 thumb">
+   <div class="embed-responsive embed-responsive-16by9 scoreboard">
 <?php if ($row['local_video'] > NULL) { ?>    
 <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
 <? } else {  ?>
