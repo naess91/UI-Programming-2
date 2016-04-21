@@ -8,11 +8,6 @@ $stmt = $dbh->prepare($query);
 
 $stmt->execute();
 
-
-
-
-$query = mysql_query(
-	'SELECT * FROM  voting ');
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,12 +1,14 @@
 <?php
 
-include('config.php');
+require_once('config.php');
 
-# connect mysql db
-dbConnect();
+$query = 'SELECT * FROM voting ORDER BY vote DESC LIMIT 10 ';
 
-$query = mysql_query(
-	'SELECT * FROM voting ORDER BY vote DESC LIMIT 10 ');
+$stmt = $dbh->prepare($query);
+
+$stmt->execute();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,14 +51,14 @@ $query = mysql_query(
  <!-- Page Content -->
 
         <div class="row">
-<?php while($row = mysql_fetch_array($query)): ?>
+<?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
  <div class="col-lg-6 thumb">
    <div class="embed-responsive embed-responsive-16by9 scoreboard">
-<?php if ($row['local_video'] > NULL) { ?>    
+<?php if ($row['local_video'] > NULL) : ?>    
 <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
-<? } else {  ?>
+<? else :  ?>
 <iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>" allowfullscreen></iframe>
-<? }?>
+<? endif?>
 </div> 
 
 		<div class="item" data-postid="<?php echo $row['id'] ?>" data-score="<?php echo $row['vote'] ?>">
@@ -73,11 +75,11 @@ $query = mysql_query(
                 <p><?php echo $row['category']?></p>	
 		</div><!--item-->
         </div>
-		<?php endwhile?>
+		<?php endwhile;?>
 
 		
 	</div>
-	<?php dbConnect(false); ?>
+	
            
 
 
