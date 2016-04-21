@@ -1,9 +1,8 @@
 <?php
 
-include('config.php');
+require_once('config.php');
 
-# connect mysql db
-dbConnect();
+
 
 $query = mysql_query(
 	'SELECT * FROM  voting ');
@@ -52,11 +51,11 @@ $query = mysql_query(
 <?php while($row = mysql_fetch_array($query)): ?>
  <div class="col-lg-4  col-xs-6 thumb">
    <div class="embed-responsive embed-responsive-16by9">
-<?php if ($row['local_video'] > NULL) { ?>    
+<?php if ($row['local_video'] > NULL) : ?>    
 <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
-<? } else {  ?>
+<? else :  ?>
 <iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>" allowfullscreen></iframe>
-<? }?>
+<? endif?>
 </div> 
 
 		<div class="item" data-postid="<?php echo $row['id'] ?>" data-score="<?php echo $row['vote'] ?>">
@@ -73,11 +72,11 @@ $query = mysql_query(
                 <p><?php echo $row['category']?></p>	
 		</div><!--item-->
         </div>
-		<?php endwhile?>
+		<?php endwhile;?>
 
 		
 	</div>
-	<?php dbConnect(false); ?>
+	
            
 
 

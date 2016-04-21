@@ -1,22 +1,9 @@
 <?php
-# db configuration 
-define('DB_HOST',		'localhost');
-define('DB_USER',		'root');
-define('DB_PASS',		'root');
-define('DB_NAME',		'Login');
-
-# db connect
-function dbConnect($close=true){
-	global $link;
-
-	if (!$close) {
-		mysql_close($link);
-		return true;
-	}
-
-	$link = mysql_connect(DB_HOST, DB_USER, DB_PASS) or die('Could not connect to MySQL DB ') . mysql_error();
-	if (!mysql_select_db(DB_NAME, $link))
-		return false;
-}
-
+$mysql_hostname = "localhost";
+$mysql_user = "root";
+$mysql_password = "root";
+$mysql_database = "Login";
+$prefix = "";
+$bd = mysql_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");
+mysql_select_db($mysql_database, $bd) or die("Could not select database");
 ?>

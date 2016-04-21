@@ -3,7 +3,7 @@
  * jQuery Voting System
  * @link http://www.w3bees.com/2013/09/voting-system-with-jquery-php-and-mysql.html
  */
-
+# connect mysql db
 include('config.php');
 # start new session
 session_start();
@@ -13,8 +13,8 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH']) {
 		$postId = (int) mysql_real_escape_string($_POST['postid']);
 		# check if already voted, if found voted then return
 		if (isset($_SESSION['vote'][$postId])) return;
-		# connect mysql db
-		dbConnect();
+		
+		
 
 		# query into db table to know current voting score 
 		$query = mysql_query("
@@ -38,8 +38,8 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH']) {
 
 			# set session with post id as true
 			$_SESSION['vote'][$postId] = true;
-			# close db connection
-			dbConnect(false);
+		
+			
 		}
 	}
 }
