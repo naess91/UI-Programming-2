@@ -1,6 +1,4 @@
-<?php
-	require_once('auth.php');
-?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,8 +16,8 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../css/admin.css" rel="stylesheet">
-    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="graphical-tutorial.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -40,12 +38,41 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        
-            <div class="container-fluid">
-               <div class="row">
+        <div class="row">
+     
+           
+                <canvas onclick="hideCanvas()" id="myCanvas"></canvas>
                         <div class="col-sm-6 col-sm-offset-3 form-box">
+                        
+               <script>
+	  var canvas = document.getElementById('myCanvas');
+   
+	  canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+   	  var context = canvas.getContext('2d');
+      // begin custom shape
+	  // begin custom shape
+      context.beginPath();
+      context.moveTo(170, 90);
+      context.rect(220,67,378,40);
+      context.rect(220,151,378,40);
+      context.rect(220,232,378,40);
+	  context.rect(220,272,378,40);
+	  context.font = "16px Arial";
+	  context.fillText("Define the title of video",615,93);
+	  context.fillText("Choose category for the video", 615,175);
+	  context.fillText("Choose if the video is a local file or youtube embeded", 615, 257);
+	  context.fillText("Add link to local folder or youtube link", 615, 300);
+
+      // complete custom shape
+      context.closePath();
+      context.lineWidth = 3;
+      context.strokeStyle = 'blue';
+      context.stroke();
+
+			   </script>
                        
- <form name="form1" method="post" action="add_movie_controller.php">
+ <form name="form1" id = "addMovieForm" method="post" action="add_movie_controller.php">
  <fieldset class="form-group">
     <label for="formGroupExampleInput">Title</label>
     <input name="title" type="text" id="title" class="form-control">
@@ -57,7 +84,7 @@
   <fieldset class="form-group">
    <label for="formGroupExampleInput">Video type & link</label>
     <select data-role="none" name="select2[]" class="form-control" id="mySelect" data-theme="e">
-        <option value="link" selected="selected" >Choose link</option>
+        <option value="link" selected="selected" >Choose type</option>
         <option value="local_video" >Local video</option>
          <option value="youtube_link" >Youtube link</option>
     </select>
@@ -66,14 +93,15 @@
    	<input type="submit" name="Submit" value="Submit"></td>
 </form>
 
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        <a href="#menu-toggle" style = "z-index:2;" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        <button onclick="showCanvas()">Tutorial</button>
                     </div>
-                </div>
-            </div>
-        </div>
+       
+          </div>
+        
         <!-- /#page-content-wrapper -->
 
-    </div>
+    
     <!-- /#wrapper -->
 
     <!-- jQuery -->
@@ -84,6 +112,23 @@
 
     <!-- Menu Toggle Script -->
     <script>
+	
+	
+	
+	 $( "#show" ).click(function() {
+  $( "#myCanvas" ).style.visibility='visible';
+});
+
+	function showCanvas() {
+                var showme = document.getElementById("myCanvas");
+                showme.style.visibility = "visible";
+            }
+			
+	function hideCanvas() {
+                var showme = document.getElementById("myCanvas");
+                showme.style.visibility = "hidden";
+            }		
+	
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");

@@ -11,16 +11,13 @@
                     <a href="add_movie.php">Add movie</a>
                 </li>
                 <li>
-                    <a href="#">Overview</a>
+                    <a href="edit_movies.php">Edit movie</a>
                 </li>
                 <li>
                     <a href="#">Events</a>
                 </li>
                 <li>
                     <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
                 </li>
                 <br />
                 <br />
@@ -29,4 +26,6 @@
                 </li>
             </ul>
         </div>
+        
+        
         <!-- /#sidebar-wrapper -->

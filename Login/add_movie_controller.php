@@ -1,14 +1,9 @@
 <?php
 
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password="root"; // Mysql password 
-$db_name="Login"; // Database name 
-$tbl_name="voting"; // Table name 
 
-// Connect to server and select database.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
+require_once('connection.php');
+
+
 
 // Get values from form 
 $title=$_POST['title'];
@@ -17,8 +12,10 @@ $youtube_link=$_POST['youtube_link'];
 $local_video=$_POST['local_video'];
 
 // Insert data into mysql 
-$sql="INSERT INTO $tbl_name(title, category, youtube_link, local_video)VALUES('$title', '$category', '$youtube_link', '$local_video' )";
-$result=mysql_query($sql);
+$query = "INSERT INTO voting(title, category, youtube_link, local_video)VALUES('$title', '$category', '$youtube_link', '$local_video' )";
+$result = $dbh->prepare($query);
+$result->execute();
+
 
 // if successfully insert data into database, displays message "Successful". 
 if($result){
@@ -32,7 +29,3 @@ echo "ERROR";
 }
 ?> 
 
-<?php 
-// close connection 
-mysql_close();
-?>

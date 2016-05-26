@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* CSS for graphical tutorial using HTML5 Canvas */
+
+   #myCanvas {
+    background-color: rgba(158, 167, 184, 0.2);
+    position: fixed;
+    z-index: 1;
+	float:left;
+	display:block;
+	visibility:hidden;
+    }
+	
+	#addMovieForm {
+  	width:355px;
+	
+	}
+	
+	
+	
+@media screen and (min-width: 768px) {
+   .col-sm-offset-3 {
+    margin-left: 215px;
+}
+}
+
+@media screen and (max-width: 768px) {
+ 
+
+ #myCanvas {
+	display:none;
+    }
+	   .col-sm-offset-3 {
+    margin-left: 25%;
+}
+}
