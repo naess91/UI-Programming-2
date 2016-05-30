@@ -73,13 +73,12 @@ $stmt->execute();
 
         <div class="row">
 <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
- <div class="col-lg-6 thumb">
-   <div class="embed-responsive embed-responsive-16by9 scoreboard">
-<?php if ($row['local_video'] > NULL) : ?>    
+ <div class="col-lg-4  col-xs-6 thumb">
+   <div class="embed-responsive embed-responsive-16by9">
+
 <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
-<? else :  ?>
 <iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>" allowfullscreen></iframe>
-<? endif?>
+
 </div> 
 
 		<div class="item" data-postid="<?php echo $row['id'] ?>" data-score="<?php echo $row['vote'] ?>">
