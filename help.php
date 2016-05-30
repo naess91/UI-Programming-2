@@ -3,7 +3,7 @@
     <head>
         <title>Welcome to "Kill time movies" help tutorial!</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="description" content="Website Tour with jQuery" />
+
         
 		
    
@@ -23,56 +23,34 @@
     <body>
 
 		<div class="wrapper">
-			<h1>Codrops</h1>
-			<h2 class="tour_7">Website Tour with jQuery Demo</h2>
+			<h1>Funny Clips</h1>
 			<div class="content">
-				<p><strong>This is a demo of how to create a website tour or walkthrough with jQuery.
+				<p><strong>This is a tutorial for our website Funny clips.
 					If you start the tour, you will see tooltips in each step, explaining a certain
 					part of the website.
 					</strong>
 				</p>
 				<div class="box left">
-					<h2 class="tour_1">Create a tour</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+					<h2 class="tour_1">Clips</h2>
+				<p>This section contains various funny clips from different genres</p>
+
 				</div>
 				<div class="box right">
-					<h2 class="tour_2">Mark a tour point</h2>
-					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-					<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+					<h2 class="tour_2">Scoreboard</h2>
+					<p>This section contains a scoreboard with the highest rated clips</p>
+
 				</div>
 				<div class="box left">
-					<h2 class="tour_3">Let your users step through</h2>
-					<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					<h2 class="tour_3">Games</h2>
+					<p>This section is for people who are bored of watching funny clips, and instead want to play a classical game.</p>
 				</div>
 				<div class="box right">
-					<h2 class="tour_4">Use the autoplay function</h2>
-					<p>Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>
-					<p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+					<h2 class="tour_4">Help</h2>
+					<p>This section is for new users, who needs guidance in the navigation and functionality of the website including this tutorial.</p>
 				</div>
 				<div class="clear"></div>
-				<h2>Describe the functionality of your page</h2>
-				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-				<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-				<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-				<div class="box left">
-					<h2 class="tour_5">Choose the direction of the tooltip</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 				</div>
-				<div class="box right">
-					<h2 class="tour_6">Choose a background color</h2>
-					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-					<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-		<div class="footer">
-			<a href="http://tympanus.net/codrops/2010/12/21/website-tour/">back to the Codrops tutorial</a>
-		</div>
+
 
 		<!-- The JavaScript -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
@@ -106,14 +84,14 @@
 						"bgcolor"	: "black",
 						"color"		: "white",
 						"position"	: "TL",
-						"text"		: "You can create a tour to explain the functioning of your app",
+						"text"		: "Enjoy our clips, to kill off time!",
 						"time" 		: 5000
 					},
 					{
 						"name" 		: "tour_2",
 						"bgcolor"	: "black",
 						"color"		: "white",
-						"text"		: "Give a class to the points of your walkthrough",
+						"text"		: "Click here to see the highest rated clips by all users!",
 						"position"	: "BL",
 						"time" 		: 5000
 					},
@@ -121,7 +99,7 @@
 						"name" 		: "tour_3",
 						"bgcolor"	: "black",
 						"color"		: "white",
-						"text"		: "Customize the navigation buttons",
+						"text"		: "Bored of funny clips? Click here and enjoy!",
 						"position"	: "BL",
 						"time" 		: 5000
 					},
@@ -129,34 +107,11 @@
 						"name" 		: "tour_4",
 						"bgcolor"	: "black",
 						"color"		: "white",
-						"text"		: "You can also use the autoplay function where the user can just sit back and watch the whole tour",
+						"text"		: "Do you feel lost? Click here and we will guide you!",
 						"position"	: "TL",
 						"time" 		: 5000
 					},
-					{
-						"name" 		: "tour_5",
-						"bgcolor"	: "black",
-						"color"		: "white",
-						"text"		: "You can indicate the direction of the tooltip arrow for each tour point",
-						"position"	: "TL",
-						"time" 		: 5000
-					},
-					{
-						"name" 		: "tour_6",
-						"bgcolor"	: "#111199",
-						"color"		: "white",
-						"text"		: "Mark important tour points in a different color",
-						"position"	: "BL",
-						"time" 		: 5000
-					},
-					{
-						"name" 		: "tour_7",
-						"bgcolor"	: "black",
-						"color"		: "white",
-						"text"		: "Automatically scrolls to the right place of the website",
-						"position"	: "TL",
-						"time" 		: 5000
-					}
+
 
 				],
 				//define if steps should change automatically
@@ -172,19 +127,18 @@
 				showControls();
 				
 				/*
-				we can restart or stop the tour,
+				we can stop the tour,
 				and also navigate through the steps
 				 */
 				$('#activatetour').live('click',startTour);
 				$('#canceltour').live('click',endTour);
-				$('#endtour').live('click',endTour);
-				$('#restarttour').live('click',restartTour);
+
 				$('#nextstep').live('click',nextStep);
 				$('#prevstep').live('click',prevStep);
 				
 				function startTour(){
 					$('#activatetour').remove();
-					$('#endtour,#restarttour').show();
+					$('#endtour').show();
 					if(!autoplay && total_steps > 1)
 						$('#nextstep').show();
 					showOverlay();
@@ -234,11 +188,7 @@
 					hideOverlay();
 				}
 				
-				function restartTour(){
-					step = 0;
-					if(autoplay) clearTimeout(showtime);
-					nextStep();
-				}
+
 				
 				function showTooltip(){
 					//remove current tooltip
@@ -408,7 +358,7 @@
 				
 				function showControls(){
 					/*
-					we can restart or stop the tour,
+					we can stop the tour,
 					and also navigate through the steps
 					 */
 					var $tourcontrols  = '<div id="tourcontrols" class="tourcontrols">';
@@ -418,9 +368,8 @@
 							$tourcontrols += '<div class="nav"><span class="button" id="prevstep" style="display:none;">< Previous</span>';
 							$tourcontrols += '<span class="button" id="nextstep" style="display:none;">Next ></span></div>';
 						}
-						$tourcontrols += '<a id="restarttour" style="display:none;">Restart the tour</span>';
-						$tourcontrols += '<a id="endtour" style="display:none;">End the tour</a>';
-						$tourcontrols += '<span class="close" id="canceltour"></span>';
+
+					$tourcontrols += '<span class="close" id="canceltour"></span>';
 					$tourcontrols += '</div>';
 					
 					$('BODY').prepend($tourcontrols);
