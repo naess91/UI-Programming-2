@@ -7,12 +7,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Kill time movies</a>
+      <a class="navbar-brand" href="#">Funny clips</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Home</a></li>
-        <li><a href="#movies">Movies</a></li>
+        <li class="active"><a href="index.php">Clips</a></li>
         <li><a href="scoreboard.php">Scoreboard</a></li>
         <li><a href="#help">Help</a></li>
         <li><a href="#games">Games</a></li>

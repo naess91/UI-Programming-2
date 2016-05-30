@@ -11,7 +11,7 @@
                 <li>
                     <a href="edit_movies.php">Edit movie</a>
                 </li>
-              
+
                 <br />
                 <br />
                 <li>
