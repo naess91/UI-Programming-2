@@ -13,8 +13,8 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.php">Clips</a></li>
         <li><a href="scoreboard.php">Scoreboard</a></li>
-        <li><a href="#help">Help</a></li>
-        <li><a href="#games">Games</a></li>
+        <li><a href="help.php">Help</a></li>
+        <li><a href="games.php">Games</a></li>
         <a href = "login/"><button type="button" class="btn btn-lg btn-primary">Login</button></a>
       </ul>
     </div><!--/.nav-collapse -->
