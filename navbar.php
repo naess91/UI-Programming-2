@@ -15,6 +15,7 @@
         <li><a href="#movies">Movies</a></li>
         <li><a href="scoreboard.php">Scoreboard</a></li>
         <li><a href="#help">Help</a></li>
+        <li><a href="#games">Games</a></li>
         <a href = "login/"><button type="button" class="btn btn-lg btn-primary">Login</button></a>
       </ul>
     </div><!--/.nav-collapse -->
