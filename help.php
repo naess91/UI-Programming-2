@@ -4,8 +4,33 @@
         <title>Welcome to "Kill time movies" help tutorial!</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-        
-		
+        <style>
+        button {
+                    white-space: nowrap;
+                	display:block;
+                	float:left;
+                	margin:65px 100px 400px 290px;
+                	cursor:pointer;
+                	background: #c63929;
+                	background: -moz-linear-gradient(0% 100% 90deg, #891100 0%, #B51700 50%, #c63929 50%, #EE432E 100%);
+                	background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #ee432e), color-stop(0.5, #c63929), color-stop(0.5, #b51700), color-stop(1, #891100));
+                	border: 1px solid #951100;
+                	-moz-border-radius: 5px;
+                	-webkit-border-radius: 5px;
+                	border-radius: 5px;
+                	-moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333;
+                	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333;
+                	box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333;
+                	color: #fff;
+                	font-size: 13px;
+                	font-weight: bold;
+                	letter-spacing: 1px;
+                	line-height: 1;
+                	padding:6px 7px;
+                	text-align: center;
+                	text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+                	}
+         </style>
    
 
     
@@ -50,7 +75,7 @@
 				</div>
 				<div class="clear"></div>
 				</div>
-
+<a href = "index.php"><button type="button" class="btn btn-lg btn-primary">Click here to return to the homepage</button></a>
 
 		<!-- The JavaScript -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
