@@ -72,13 +72,6 @@ $stmt->execute();
     <h1>Scoreboard</h1>
  <!-- Page Content -->
 
-<<<<<<< Updated upstream
-        <div class="row">
-<?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
- <div class="col-lg-4  col-xs-6 thumb">
-   <div class="embed-responsive embed-responsive-16by9">
-
-=======
         <div class="row"> 
 <ul class="bxslider">       
 <?php 
@@ -86,11 +79,8 @@ $num = 1;
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
 <li>
    <div class="embed-responsive embed-responsive-16by9 scoreboard">
-<?php if ($row['local_video'] > NULL) : ?>    
->>>>>>> Stashed changes
 <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
 <iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>" allowfullscreen></iframe>
-
 </div> 
 
 		<div data-postid="<?php echo $row['id'] ?>" data-score="<?php echo $row['vote'] ?>">
