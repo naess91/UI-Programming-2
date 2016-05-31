@@ -93,5 +93,14 @@ $stmt->execute();
 <script src="js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/voting.js"></script>
+
+<!-- Footer admin login -->
+
+<footer class="footer">
+      <div class="container">
+        <a href="login/">Login as administrator here</a>
+      </div>
+</footer>
+
 </body>
 </html>
