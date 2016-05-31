@@ -47,7 +47,6 @@
         <li><a href="scoreboard.php">Scoreboard</a></li>
         <li><a href="help.php">Help</a></li>
         <li class="active"><a href="games.php">Games</a></li>
-        <a href = "login/"><button type="button" class="btn btn-lg btn-primary">Login</button></a>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
