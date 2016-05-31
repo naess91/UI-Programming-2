@@ -187,6 +187,19 @@ img { max-width: 100%; }
 	margin-top: 25px;
 }
 
+
+/***** Scoreboard *****/
+.score {
+	float:left;
+}
+
+.scoreboard-content {
+	margin-top:20px;
+	font-size:20px;
+}
+
+
+
 /***** Media queries *****/
 #login {
 	background-image: url("../img/backgrounds/1.jpg");

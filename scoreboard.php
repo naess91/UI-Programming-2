@@ -30,6 +30,7 @@ $stmt->execute();
     <link href="css/style.css" rel="stylesheet">
     <link href="vote/css/style.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -71,17 +72,28 @@ $stmt->execute();
     <h1>Scoreboard</h1>
  <!-- Page Content -->
 
+<<<<<<< Updated upstream
         <div class="row">
 <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
  <div class="col-lg-4  col-xs-6 thumb">
    <div class="embed-responsive embed-responsive-16by9">
 
+=======
+        <div class="row"> 
+<ul class="bxslider">       
+<?php 
+$num = 1;
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+<li>
+   <div class="embed-responsive embed-responsive-16by9 scoreboard">
+<?php if ($row['local_video'] > NULL) : ?>    
+>>>>>>> Stashed changes
 <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
 <iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>" allowfullscreen></iframe>
 
 </div> 
 
-		<div class="item" data-postid="<?php echo $row['id'] ?>" data-score="<?php echo $row['vote'] ?>">
+		<div data-postid="<?php echo $row['id'] ?>" data-score="<?php echo $row['vote'] ?>">
 			<div class="vote-span"><!-- voting-->
 				<div class="vote" data-action="up" title="Vote up">
 					<i class="icon-chevron-up"></i>
@@ -91,12 +103,14 @@ $stmt->execute();
 					<i class="icon-chevron-down"></i>
 				</div><!--vote down-->
 			</div>
+            <div class = "scoreboard-content">
+            <p class = "score"><?php echo $num++ ?>.</p>
 				<p><?php echo $row['title']?></p>
-                <p><?php echo $row['category']?></p>	
+                </div>
 		</div><!--item-->
-        </div>
+        </li>
 		<?php endwhile;?>
-
+</ul>
 		
 	</div>
 	
@@ -110,9 +124,19 @@ $stmt->execute();
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/voting.js"></script>
+<script src="js/plugins/jquery.fitvids.js"></script>
+<script src="js/plugins/jquery.bxslider.js"></script>
+<script>
+$('.bxslider').bxSlider({
+  video: true,
+  useCSS: false
+});
+</script>
 </body>
 </html>
