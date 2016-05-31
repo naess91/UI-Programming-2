@@ -15,7 +15,7 @@
                 <br />
                 <br />
                 <li>
-                   <a href="../index.php">Logout</a>
+                   <a href="../clips.php">Logout</a>
                 </li>
             </ul>
         </div>

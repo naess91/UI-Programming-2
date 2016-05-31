@@ -2,7 +2,7 @@
 
 
 require_once('connection.php');
-
+error_reporting(0);
 
 
 // Get values from form 

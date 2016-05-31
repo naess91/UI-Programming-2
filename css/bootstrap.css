@@ -4284,6 +4284,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
+  color:#9d9d9d;
 }
 .navbar-brand > img {
   display: block;
