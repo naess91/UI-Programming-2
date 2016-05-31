@@ -52,11 +52,11 @@ $stmt->execute();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Funny clips</a>
+      <a class="navbar-brand" href="index.html">Funny clips</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="index.php">Clips</a></li>
+        <li><a href="clips.php">Clips</a></li>
         <li class="active"><a href="scoreboard.php">Scoreboard</a></li>
         <li><a href="help.php">Help</a></li>
         <li><a href="games.php">Games</a></li>
