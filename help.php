@@ -75,7 +75,7 @@
 				</div>
 				<div class="clear"></div>
 				</div>
-<a href = "index.html"><button type="button" class="btn btn-lg btn-primary">Click here to return to the homepage</button></a>
+<a href = "clips.php"><button type="button" class="btn btn-lg btn-primary">Click here to return to the homepage</button></a>
 
 		<!-- The JavaScript -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
