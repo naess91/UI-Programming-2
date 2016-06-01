@@ -68,7 +68,7 @@ $stmt->execute();
 <div class="container">
 
   <div class="starter-template">
-    <h1>This site is under construction</h1>
+    <h1>Clips</h1>
  <!-- Page Content -->
 
         <div class="row">
