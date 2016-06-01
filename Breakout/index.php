@@ -70,6 +70,7 @@
 </div>
 
 </div><!-- /.container -->
+<!-- adding variables -->
 <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -92,7 +93,7 @@
     var brickOffsetLeft = 30;
     var score = 0;
     var lives = 3;
-
+<!-- Bricks loop -->
     var bricks = [];
     for(c=0; c<brickColumnCount; c++) {
         bricks[c] = [];
@@ -104,7 +105,7 @@
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
     document.addEventListener("mousemove", mouseMoveHandler, false);
-
+<!-- keyboard and mouse controls -->
     function keyDownHandler(e) {
         if(e.keyCode == 39) {
             rightPressed = true;
@@ -127,6 +128,7 @@
             paddleX = relativeX - paddleWidth/2;
         }
     }
+    <!-- Counting points -->
     function collisionDetection() {
         for(c=0; c<brickColumnCount; c++) {
             for(r=0; r<brickRowCount; r++) {
@@ -145,7 +147,7 @@
             }
         }
     }
-
+<!-- Defining elements: ball, paddle, bricks, score, lives -->
     function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI*2);
@@ -187,7 +189,7 @@
         ctx.fillStyle = "#0095DD";
         ctx.fillText("Lives: "+lives, canvas.width-65, 20);
     }
-
+<!-- call for the function we previous drawed -->
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBricks();
@@ -196,7 +198,7 @@
         drawScore();
         drawLives();
         collisionDetection();
-
+<!-- Different scenarios counting the game -->
         if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
             dx = -dx;
         }

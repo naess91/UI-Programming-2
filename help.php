@@ -4,6 +4,7 @@
         <title>Welcome to "Kill time movies" help tutorial!</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
+           <!-- CSS code for back button since it collides with bootstrap -->
         <style>
         button {
                     white-space: nowrap;
@@ -33,7 +34,7 @@
          </style>
    
 
-    
+    <!-- Bootstrap and including the css files for the tutorial tour -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/websitetour.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquerytour.css" />
@@ -46,7 +47,7 @@
 		</script>
     </head>
     <body>
-
+         <!-- The div elements with all classes -->
 		<div class="wrapper">
 			<h1>Funny Clips</h1>
 			<div class="content">
