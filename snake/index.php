@@ -39,15 +39,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Funny clips</a>
+      <a class="navbar-brand" href="index.html">Funny clips</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="../index.php">Clips</a></li>
+        <li><a href="../clips.php">Clips</a></li>
         <li><a href="../scoreboard.php">Scoreboard</a></li>
         <li><a href="../help.php">Help</a></li>
         <li class="active"><a href="../games.php">Games</a></li>
-        <a href = "login/"><button type="button" class="btn btn-lg btn-primary">Login</button></a>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -60,6 +59,10 @@
  <!-- Page Content -->
 
  <div class="row">
+ <ol class="breadcrumb">
+  <li><a href="../games.php">Games</a></li>
+  <li class="active">Snake</li>
+</ol>
 <div class = "snake">
 <h2>Snake</h2>
 <p>Use arrows to steer the snake</p>  

@@ -59,6 +59,10 @@
 
   <div class="starter-template">
  <div class="row">
+ <ol class="breadcrumb">
+  <li><a href="../games.php">Games</a></li>
+  <li class="active">Breakout</li>
+</ol>
 <h2>Breakout</h2>
 
 <canvas id="myCanvas" width="480" height="320"></canvas>
