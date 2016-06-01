@@ -1,3 +1,15 @@
+<!---
+File: index.php
+
+This file contains html code to play snake
+
+Requires: main.js
+
+Version 1.0
+Author: Erik Naess
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

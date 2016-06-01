@@ -1,14 +1,27 @@
+<!---
+File: edit_movies.php
+
+This file contains basic html, php and javascript code. Still a work in progress and will be implemented if we have time
+
+Version 1.0
+Author: Erik Naess
+
+-->
+
 <?php
 
-
+// Connect to database
 require_once('connection.php');
 
+// sql request
 $youtube = 'SELECT id, title, category, vote, youtube_link FROM voting where local_video is null';
 
 $stmt1 = $dbh->prepare($youtube);
 
 $stmt1->execute();
 
+
+// sql request
 $local = 'SELECT id, title, category, vote, local_video FROM voting where youtube_link is null';
 
 $stmt2 = $dbh->prepare($local);
@@ -60,7 +73,8 @@ $stmt2->execute();
 <div class="controls">
    <a href="#" id="edit" class="btn">Edit</a>
 </div>
-   <h3>Youtube videos</h3>          
+   <h3>Youtube videos</h3>  
+    <!-- Presenting youtube videos -->        
   <?php while($row = $stmt1->fetch(PDO::FETCH_ASSOC)): ?>      
         
   <div class="media" id="<?php echo $row['id'] ?>" >
@@ -78,7 +92,7 @@ $stmt2->execute();
 </div>
 <?php endwhile;?>
 
-
+ <!-- Presenting local videos -->
 <h3>Local videos</h3>
  <?php while($row1 = $stmt2->fetch(PDO::FETCH_ASSOC)): ?>      
         
@@ -88,7 +102,6 @@ $stmt2->execute();
   </div>
   <div class="media-body">
     <h5 class="media-heading"><?php echo $row1['title']?></h5>
-                <p><?php echo $row1['category']?></p>
                 <br />
                 <p><?php echo $row1['local_video']?></p>
  

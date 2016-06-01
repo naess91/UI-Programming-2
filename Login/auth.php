@@ -1,3 +1,14 @@
+<!---
+File: auth.php
+
+This file contains the basic html and javascript code to add clips into the database
+
+Requires add_movie_controller.php
+
+Version 1.0
+Author: Erik Naess
+
+-->
 <?php
 	//Start session
 	session_start();

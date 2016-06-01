@@ -1,3 +1,12 @@
+<!---
+File: help.php
+
+This file contains the basic html and javascript code for the website tour and tutorial
+
+Version 1.0
+Author: Mostafa Danaei
+
+-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
@@ -38,13 +47,7 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/websitetour.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquerytour.css" />
-		<script src="js/cufon-yui.js" type="text/javascript"></script>
-		<script src="js/ChunkFive_400.font.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			Cufon.replace('h1',{ textShadow: '1px 1px #fff'});
-			Cufon.replace('h2',{ textShadow: '1px 1px #fff'});
-			Cufon.replace('.footer');
-		</script>
+		
     </head>
     <body>
          <!-- The div elements with all classes -->
@@ -417,5 +420,12 @@
 				
 			});
         </script>
+        <script src="js/cufon-yui.js" type="text/javascript"></script>
+		<script src="js/ChunkFive_400.font.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			Cufon.replace('h1',{ textShadow: '1px 1px #fff'});
+			Cufon.replace('h2',{ textShadow: '1px 1px #fff'});
+			Cufon.replace('.footer');
+		</script>
     </body>
 </html>

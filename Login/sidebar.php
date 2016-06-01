@@ -1,3 +1,13 @@
+<!---
+File: sidebar.php
+
+This file contains the basic html code for the admin sidebar
+
+Version 1.0
+Author: Erik Naess
+
+-->
+
 <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">

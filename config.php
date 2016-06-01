@@ -1,5 +1,5 @@
 <?php
-
+// Database setup
 $dsn = 'mysql:dbname=Login;host=localhost';
 $user = 'root';
 $password = '';

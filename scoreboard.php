@@ -1,11 +1,24 @@
+<!---
+File: Scoreboard.php
+
+This file contains html, javascript and php code for presenting the clip scoreboard
+
+Version 1.0
+Author: Erik Naess
+
+-->
 <?php
 
+// fetch database credentials
 require_once('config.php');
 
+// setup sql request
 $query = 'SELECT * FROM voting ORDER BY vote DESC LIMIT 10 ';
 
+// prepare sql
 $stmt = $dbh->prepare($query);
 
+// execute sql
 $stmt->execute();
 
 
@@ -66,16 +79,21 @@ $stmt->execute();
 </nav>
 <!-- Navbar endes here -->
 <div class="container">
-
+ <!-- Page Content -->
   <div class="starter-template">
     <h1>Scoreboard</h1>
- <!-- Page Content -->
+
 
         <div class="row"> 
+        
+<!-- Fetch slider plugin -->
 <ul class="bxslider">       
 <?php 
+// Present the scoreboard ratings 1-10
 $num = 1;
+// Presenting sql data with a while loop
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+<!-- Presenting youtube embed or local file in a slider -->
 <li>
    <div class="embed-responsive embed-responsive-16by9 scoreboard">
 <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
@@ -108,12 +126,6 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
 
 
 </div><!-- /.container -->
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

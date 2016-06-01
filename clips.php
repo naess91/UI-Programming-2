@@ -1,12 +1,15 @@
 <?php
 
-
+// fetch database credentials
 require_once('config.php');
 
+// setup sql request
 $query = 'SELECT * FROM  voting ';
 
+// prepare sql
 $stmt = $dbh->prepare($query);
 
+// execute sql
 $stmt->execute();
 
 ?>
@@ -18,7 +21,7 @@ $stmt->execute();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-  <title>Starter Template for Bootstrap</title>
+  <title>Funny clips</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -65,22 +68,26 @@ $stmt->execute();
         </div>
       </nav>
 <!-- Navbar endes here -->
+
+<!-- Page Content -->
 <div class="container">
 
   <div class="starter-template">
     <h1>Clips</h1>
- <!-- Page Content -->
+ 
 
         <div class="row">
+<!-- Presenting sql data with a while loop -->
 <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+ <!-- Bootstrap thumbnails -->
  <div class="col-lg-4  col-xs-6 thumb">
-   <div class="embed-responsive embed-responsive-16by9">
-    
+  <!-- Bootstrap responsive embed video class -->
+   <div class="embed-responsive embed-responsive-16by9">  
+   <!-- Presenting youtube embed or local file -->
 <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
 <iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>" allowfullscreen></iframe>
-
 </div> 
-
+	 <!-- presenting the votes -->
 		<div class="item" data-postid="<?php echo $row['id'] ?>" data-score="<?php echo $row['vote'] ?>">
 			<div class="vote-span"><!-- voting-->
 				<div class="vote" data-action="up" title="Vote up">
@@ -91,8 +98,8 @@ $stmt->execute();
 					<i class="icon-chevron-down"></i>
 				</div><!--vote down-->
 			</div>
-				<p><?php echo $row['title']?></p>
-                <p><?php echo $row['category']?></p>	
+             <!-- presenting the title -->
+				<p><?php echo $row['title']?></p>	
 		</div><!--item-->
         </div>
 		<?php endwhile;?>
@@ -107,12 +114,9 @@ $stmt->execute();
 </div><!-- /.container -->
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/voting.js"></script>
 
 <!-- Footer admin login -->

@@ -7,12 +7,11 @@ error_reporting(0);
 
 // Get values from form 
 $title=$_POST['title'];
-$category=$_POST['category'];
 $youtube_link=$_POST['youtube_link'];
 $local_video=$_POST['local_video'];
 
 // Insert data into mysql 
-$query = "INSERT INTO voting(title, category, youtube_link, local_video)VALUES('$title', '$category', '$youtube_link', '$local_video' )";
+$query = "INSERT INTO voting(title, youtube_link, local_video)VALUES('$title', '$youtube_link', '$local_video' )";
 $result = $dbh->prepare($query);
 $result->execute();
 

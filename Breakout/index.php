@@ -1,3 +1,13 @@
+<!---
+File: index.php
+
+This file contains html, javascript code to play breakout
+
+
+Version 1.0
+Author: Erik Naess
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

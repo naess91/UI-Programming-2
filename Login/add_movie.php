@@ -1,4 +1,14 @@
+<!---
+File: add_movie.php
 
+This file contains the basic html and javascript code to add clips into the database
+
+Requires add_movie_controller.php
+
+Version 1.0
+Author: Erik Naess
+
+-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -54,10 +64,12 @@
 	  // begin custom shape
       context.beginPath();
       context.moveTo(170, 90);
+	  // defining rectangles
       context.rect(220,67,378,40);
       context.rect(220,151,378,40);
       context.rect(220,232,378,40);
 	  context.rect(220,272,378,40);
+	  // Text for boxes 
 	  context.font = "16px Arial";
 	  context.fillText("Define the title of video",615,93);
 	  context.fillText("Choose category for the video", 615,175);
@@ -78,10 +90,6 @@
     <input name="title" type="text" id="title" class="form-control">
   </fieldset>
   <fieldset class="form-group">
-    <label for="formGroupExampleInput">Category</label>
-    <input name="category" type="text" id="category" class="form-control">
-  </fieldset>
-  <fieldset class="form-group">
    <label for="formGroupExampleInput">Video type & link</label>
     <select data-role="none" name="select2[]" class="form-control" id="mySelect" data-theme="e">
         <option value="link" selected="selected" >Choose type</option>
@@ -93,7 +101,7 @@
    	<input type="submit" name="Submit" value="Submit"></td>
 </form>
 
-                        <a href="#menu-toggle" style = "z-index:2;" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+        <a href="#menu-toggle" style = "z-index:2;" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                         <button onclick="showCanvas()">Tutorial</button>
                     </div>
        
@@ -112,13 +120,7 @@
 
     <!-- Menu Toggle Script -->
     <script>
-	
-	
-	
-	 $( "#show" ).click(function() {
-  $( "#myCanvas" ).style.visibility='visible';
-});
-
+	<!-- show/hide canvas -->
 	function showCanvas() {
                 var showme = document.getElementById("myCanvas");
                 showme.style.visibility = "visible";
@@ -128,12 +130,14 @@
                 var showme = document.getElementById("myCanvas");
                 showme.style.visibility = "hidden";
             }		
-	
+	<!-- show/hide element -->
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
 	
+	
+	<!-- change element id depending on youtube link or local file -->
 	$(function(){
     $('#mySelect').on('change', function() {
         var value = $(this).val();

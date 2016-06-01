@@ -1,9 +1,14 @@
+<!---
+File: axajvote.php
+
+This file contains php code to handle the voting of video clips
+
+Version 1.0
+Author: Erik Naess
+
+-->
+
 <?php
-/**
- * jQuery Voting System
- * @link http://www.w3bees.com/2013/09/voting-system-with-jquery-php-and-mysql.html
- */
- 
 
 include('config.php');
 # start new session
