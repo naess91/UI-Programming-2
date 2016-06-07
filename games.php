@@ -50,8 +50,8 @@ Author: Erik Naess
       <ul class="nav navbar-nav">
         <li><a href="clips.php">Clips</a></li>
         <li><a href="scoreboard.php">Scoreboard</a></li>
+        <li class = "active"><a href="games.php">Games</a></li>
         <li><a href="help.php">Help</a></li>
-        <li class="active"><a href="games.php">Games</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -89,7 +89,11 @@ Author: Erik Naess
 
 
 </div><!-- /.container -->
-
+<footer class="footer">
+      <div class="container">
+        <a href="login/">Login as administrator here</a>
+      </div>
+</footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

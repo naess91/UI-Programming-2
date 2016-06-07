@@ -71,8 +71,8 @@ $stmt->execute();
       <ul class="nav navbar-nav">
         <li><a href="clips.php">Clips</a></li>
         <li class="active"><a href="scoreboard.php">Scoreboard</a></li>
-        <li><a href="help.php">Help</a></li>
         <li><a href="games.php">Games</a></li>
+        <li><a href="help.php">Help</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -139,5 +139,11 @@ $('.bxslider').bxSlider({
   useCSS: false
 });
 </script>
+
+<footer class="footer">
+      <div class="container">
+        <a href="login/">Login as administrator here</a>
+      </div>
+</footer>
 </body>
 </html>

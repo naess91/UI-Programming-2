@@ -1,3 +1,14 @@
+<!---
+File: clips.php
+
+This file contains html and php code for showing funny video clips
+
+
+Version 1.0
+Author: Erik Naess
+
+-->
+
 <?php
 
 // fetch database credentials
@@ -60,8 +71,9 @@ $stmt->execute();
             <ul class="nav navbar-nav">
               <li class="active"><a href="clips.php">Clips</a></li>
               <li><a href="scoreboard.php">Scoreboard</a></li>
-              <li><a href="help.php">Help</a></li>
               <li><a href="games.php">Games</a></li>
+              <li><a href="help.php">Help</a></li>
+             
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -84,8 +96,16 @@ $stmt->execute();
   <!-- Bootstrap responsive embed video class -->
    <div class="embed-responsive embed-responsive-16by9">  
    <!-- Presenting youtube embed or local file -->
-<video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>
-<iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>" allowfullscreen></iframe>
+<?           
+if($row['local_video'] != null)
+{?>
+   <video controls class="embed-responsive-item" src="<?php echo $row['local_video'] ?>"></video>   
+    <? } 
+else
+{ ?>
+    <iframe class="embed-responsive-item" src="<?php echo $row['youtube_link'] ?>" allowfullscreen></iframe>
+<? }
+?>
 </div> 
 	 <!-- presenting the votes -->
 		<div class="item" data-postid="<?php echo $row['id'] ?>" data-score="<?php echo $row['vote'] ?>">
@@ -107,7 +127,6 @@ $stmt->execute();
 		
 	</div>
 	
-           
 
 
 

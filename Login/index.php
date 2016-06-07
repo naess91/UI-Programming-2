@@ -19,7 +19,7 @@ Author: Erik Naess
 	unset($_SESSION['SESS_LAST_NAME']);
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
+<title>Admin login</title>
 <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/form-elements.css">

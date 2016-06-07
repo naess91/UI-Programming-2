@@ -16,7 +16,7 @@ Author: Erik Naess
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-  <title>Starter Template for Bootstrap</title>
+  <title>Funny Clips</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,6 @@ Author: Erik Naess
   <!-- Custom styles for this template -->
   <link href="../css/base.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -49,15 +48,14 @@ Author: Erik Naess
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Funny clips</a>
+      <a class="navbar-brand" href="../index.html">Funny clips</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="../index.php">Clips</a></li>
         <li><a href="../scoreboard.php">Scoreboard</a></li>
-        <li><a href="../help.php">Help</a></li>
         <li class="active"><a href="../games.php">Games</a></li>
-        <a href = "login/"><button type="button" class="btn btn-lg btn-primary">Login</button></a>
+        <li><a href="../help.php">Help</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -250,5 +248,11 @@ Author: Erik Naess
     draw();
 </script>
 
+
+<footer class="footer">
+      <div class="container">
+        <a href="login/">Login as administrator here</a>
+      </div>
+</footer>
 </body>
 </html>
